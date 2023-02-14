@@ -122,11 +122,11 @@ function makeMarkup(hits) {
     return markup, gallery.refresh();
 }
 
-
 function message(data) {
   
-  if (imageApiService.page === 2)
-    Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`); 
+    if (imageApiService.page == 2) {
+        Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images.`);
+    }
   if (data.hits.length < imageApiService.perPage) {
     loadButton.hide();
     Notiflix.Notify.warning(

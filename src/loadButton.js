@@ -23,6 +23,7 @@ class LoadButton {
     }
 
     enable() {
+    this.button.removeAttribute('disabled');
     this.button.textContent = "Load more";
   }
 }
