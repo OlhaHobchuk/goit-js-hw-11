@@ -41,6 +41,20 @@ align-items: center;
     align-items: center;
 }
 
+.load-more {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px 30px;
+    display: block;
+    background-color: blue;
+    color: white;
+    font-size: 14px;
+    border-radius: 4px;
+
+}
+
+
 button:disabled {
     margin-top: 50px;
     margin-left: auto;
@@ -58,15 +72,3 @@ button.hidden {
     display: none;
 }
 
-.load-more {
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 15px 30px;
-    display: block;
-    background-color: blue;
-    color: white;
-    font-size: 14px;
-    border-radius: 4px;
-
-}

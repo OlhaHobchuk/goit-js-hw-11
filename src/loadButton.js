@@ -22,8 +22,7 @@ class LoadButton {
     this.button.textContent = "Loading...";
     }
     
-  enable() {
-    this.button.disabled = false;
+    enable() {
     this.button.textContent = "Load more";
   }
 }

@@ -64,17 +64,15 @@ function onFormSubmit(event) {
 
 
 function onLoadButtonClick(event) {
-loadButton.disable();
-  loadButton.show();
-  return imageApiService
-    .fetchImages()
-    .then(data => {
-      message(data);
-      return data.hits
-    })
-    .then(makeMarkup)
-    .catch(error)
-    .finally(() => {
+    loadButton.disable();
+    loadButton.show();
+    return imageApiService
+        .fetchImages()
+        .then(data => {
+            message(data);
+            return data.hits
+        })
+        .then(makeMarkup).catch(error => { console.log(error);}).finally(() => {
         refs.form.reset();
         loadButton.enable();
     });
