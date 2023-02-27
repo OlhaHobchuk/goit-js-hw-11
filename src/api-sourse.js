@@ -10,7 +10,7 @@ class ImageApiService {
 
     // fetchImages() {
     //     console.log(this);
-    //     return fetch(`https://pixabay.com/api/?key=33499449-ef034a74262b4ba1fb6bf3d8d&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&${this.perPage}&${this.page}`)
+    //     return fetch(`https://pixabay.com/api/?key=33499449-ef034a74262b4ba1fb6bf3d8d&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&${this.perPage}&page=${this.page}`)
     //         .then(response => response.json())
     //         .then(data => {
     //             this.page += 1;
@@ -22,7 +22,7 @@ class ImageApiService {
 
     async fetchImages() {
         try {
-         const response = await axios.get(`https://pixabay.com/api/?key=33499449-ef034a74262b4ba1fb6bf3d8d&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&${this.page}`);
+         const response = await axios.get(`https://pixabay.com/api/?key=33499449-ef034a74262b4ba1fb6bf3d8d&q=${this.searchQuery}&image_type=photo&orientation=horizontal&safesearch=true&per_page=40&page=${this.page}`);
             this.page += 1;
             // console.log(response.data);
 
@@ -47,7 +47,6 @@ class ImageApiService {
         this.page = 1;
     }
 }
-
 
 
 export { ImageApiService };
